@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 class numbersRecyclerViewAdapter
 
-class NamesRecyclerViewAdapter(var numbers: List<Int>) :
+class NumbersRecyclerViewAdapter(var numbers: List<Int>) :
     RecyclerView.Adapter<NumbersViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NamesViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumbersViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.numbers_list_item, parent, false)
         return NumbersViewHolder(itemView)
     }
@@ -20,11 +20,11 @@ class NamesRecyclerViewAdapter(var numbers: List<Int>) :
         return numbers.size
     }
 
-    override fun onBindViewHolder(holder: NamesViewHolder, position: Int) {
-        holder.tvNumber.text = numbers[position]
+    override fun onBindViewHolder(holder: NumbersViewHolder, position: Int) {
+        holder.tvNumber.text = numbers.[position]
     }
 }
 
-class NamesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class NumbersViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var tvNumber = itemView.findViewById<TextView>(R.id.tvnumbers)
 }
